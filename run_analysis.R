@@ -160,5 +160,6 @@ final_data_gp1 <- final_data_tbl %>%
   group_by(Subject, Activity) %>%
   summarise_each(funs(mean))
 
-dim(final_data_gp)
-View(final_data_gp)
+## Create a text file
+
+write.table(final_data, "final_data.txt", row.names = FALSE) 
